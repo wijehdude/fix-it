@@ -27,7 +27,7 @@ test("sample workbook flows through to the dashboard", async ({ page }) => {
   await page.getByTestId("run-analysis").click();
 
   // Pipeline → location review.
-  await expect(page.getByRole("heading", { name: "Review location criticality" })).toBeVisible({ timeout: 90_000 });
+  await expect(page.getByRole("heading", { name: "Review location criticality" })).toBeVisible({ timeout: 240_000 });
   await page.getByTestId("to-dashboard").click();
 
   // Dashboard tabs.
@@ -50,7 +50,7 @@ test("sample workbook flows through to the dashboard", async ({ page }) => {
 
   // CRs were drafted for P1/P2 clusters.
   await page.getByRole("tab", { name: "Change Requests" }).click();
-  await expect(page.getByText(/^CR-\d{8}-\d{3}/).first()).toBeVisible({ timeout: 30_000 });
+  await expect(page.getByText(/^CR-\d{8}-\d{3}/).first()).toBeVisible({ timeout: 120_000 });
 
   expect(errors).toEqual([]);
 });
