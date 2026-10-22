@@ -1,0 +1,26 @@
+export const SYSTEM_FUNCTIONS = [
+  "ACMV – Cooling/Heating",
+  "ACMV – Air Distribution & Ventilation",
+  "ACMV – Controls",
+  "Electrical – General Lighting",
+  "Electrical – Emergency Lighting",
+  "Electrical – Power",
+  "Housekeeping – General Areas",
+  "Housekeeping – Waste Management",
+  "Sanitary – Toilet Fixtures",
+  "Sanitary – Plumbing & Drainage",
+  "Sanitary – Consumables",
+  "Security – Access Control",
+  "Security – CCTV/Surveillance",
+  "Security – Manpower/Guarding",
+  "Security – Doors & Locks",
+  "Vertical Transport (Lifts/Escalators)",
+  "Building Fabric & Structure",
+  "Fire Protection",
+  "Pest Control",
+  "Furniture & Fittings",
+  "IT/Communications",
+  "Other",
+] as const;
+
+export type SystemFunction = (typeof SYSTEM_FUNCTIONS)[number];
