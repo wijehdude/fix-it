@@ -47,5 +47,3 @@ next-env.d.ts
 /blob-report/
 /playwright/.cache/
 
-.vercel
-.env*
